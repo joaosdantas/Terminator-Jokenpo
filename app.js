@@ -16,6 +16,10 @@ const result_p = document.querySelector("#result")
 const paperButton_img = document.querySelector("#paperButton");
 const rockButton_img = document.querySelector("#rockButton");
 const scissorsButton_img = document.querySelector("#scissorsButton");
+const alteraVitoriaUser = document.querySelector("#userScore");
+const alteraDerrotaUser = document.querySelector("#userScore");
+const alteraDerrotaComp = document.querySelector("#compScore");
+const alteraVitoriaComp = document.querySelector("#compScore");
 
 //3 tipos de variaveis;
 //Let pode usar sempre;
@@ -51,6 +55,14 @@ function jogo(cliqueDoUsuario) {
             userScore_span.innerHTML = pontuacaoUsuario;
 
             result_p.innerHTML = "Point for humanity!";
+
+            alteraVitoriaUser.style.color = "#31b43a";
+
+            alteraDerrotaComp.style.color = "red";
+
+
+
+
             break;
             //derrota do usuário
         case "paperButtonscissors":
@@ -58,6 +70,12 @@ function jogo(cliqueDoUsuario) {
         case "scissorsButtonrock":
             pontuacaoComputador++;
             compScore_span.innerHTML = pontuacaoComputador;
+
+
+
+            alteraDerrotaUser.style.color = "red";
+            alteraVitoriaComp.style.color = "#31b43a";
+
 
             result_p.innerHTML = "Oh no, point for Skynet!";
 
